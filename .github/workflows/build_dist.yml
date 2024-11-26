@@ -84,6 +84,7 @@ jobs:
           path: wheelhouse/*.whl
 
   upload_pypi:
+    environment: testpypi
     name: Upload to PyPI
     needs: [sdist, wheels]
     runs-on: ubuntu-latest
