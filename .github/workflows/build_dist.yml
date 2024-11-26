@@ -73,7 +73,7 @@ jobs:
           CIBW_ARCHS_MACOS: "auto64" # since we have both runner arches
           CIBW_ARCHS_WINDOWS: "AMD64 x86"
           CIBW_BUILD: ${{ matrix.cibw_build }}
-          CIBW_SKIP: "cp*-musllinux*"
+          #CIBW_SKIP: "cp*-musllinux*"
           CIBW_TEST_COMMAND: "tox -c {project}"
           CIBW_TEST_SKIP: "*-macosx_arm64 *-macosx_universal2:arm64 *-*linux_{aarch64,ppc64le,s390x}"
           CIBW_BEFORE_BUILD: "python -m pip install -U pip && python -m pip install tox"
